@@ -1,6 +1,6 @@
 import React from 'react';
-
 import ToDoForm from "./components/TodoComponents/TodoForm"
+import ToDoList from "./components/TodoComponents/TodoList"
 
 const data = [
   {
@@ -25,7 +25,8 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      toDo: data
+      toDo: data,
+      newToDo: ""
     }
   }
 
@@ -46,6 +47,7 @@ class App extends React.Component {
     return (
       <div>
         <ToDoForm onChange = {this.onChange} onSubmit = {this.onSubmit}/>
+        <ToDoList data = {data}/>
       </div>
     );
   }

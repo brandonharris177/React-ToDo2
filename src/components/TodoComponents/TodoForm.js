@@ -10,6 +10,7 @@ class ToDoForm extends React.Component{
                     <input 
                         name = "task"
                         type = "text"
+                        placeholder = "To Do"
                         onChange = {this.props.changeHandler} 
                         />
                 </label>
